@@ -20,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${krub.variable} font-krub`}>
+      <body 
+        className={`${krub.variable} font-krub`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
