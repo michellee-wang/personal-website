@@ -573,7 +573,7 @@ export default function Memories() {
         
         {/* Footer text */}
         <p className="mt-4 sm:mt-8 text-center text-gray-600 text-sm px-4">
-          © 2025 Michelle Wang. Built with Next.js and Tailwind CSS.
+        i love my friends a lot and im happiest when with them & watching them succeed. i hope one day u can be featured here
         </p>
       </main>
     </div>
