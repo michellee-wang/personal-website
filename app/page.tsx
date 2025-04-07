@@ -14,6 +14,16 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
+      {/* Memories link in top right */}
+      <div className="absolute top-4 right-4 z-10">
+        <Link 
+          href="/memories" 
+          className="text-[#D3ABAB] hover:underline font-medium text-lg"
+        >
+          /memories
+        </Link>
+      </div>
+
       <main className="max-w-3xl w-full">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="flex flex-col items-center">

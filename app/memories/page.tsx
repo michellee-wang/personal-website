@@ -226,6 +226,57 @@ export default function Memories() {
                 priority
               />
             </div>
+            {/* last 5 photos */}
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_6340 1.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 10.01.37 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_5896.PNG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_5708.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_6406.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
           
           {/* Desktop layout with varying widths */}
