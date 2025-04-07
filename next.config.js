@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  }
+  // Next.js 18 works with App Router by default
 };
 
 module.exports = nextConfig; 
