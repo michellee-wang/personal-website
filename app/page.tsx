@@ -47,16 +47,7 @@ export default function Home() {
               <a href="https://instagram.com/michellee.wang" target="_blank" rel="noopener noreferrer">
                 <Image src="/instagram.svg" alt="Instagram" width={28} height={28} />
               </a>
-              <a href="https://x.com/michellewang857" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/x logo.svg" 
-                  alt="X" 
-                  width={28} 
-                  height={28}
-                  className="filter-pink"
-                  style={{ filter: 'invert(85%) sepia(8%) saturate(529%) hue-rotate(314deg) brightness(98%) contrast(86%)' }}
-                />
-              </a>
+              
             </div>
           </div>
           
