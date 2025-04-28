@@ -536,7 +536,7 @@ export default function Memories() {
               </div>
               <div className="w-4/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/IMG_0335 2 1.png" 
+                  src="/photos/5.jpg" 
                   alt="Memory photo"
                   fill
                   sizes="33vw"
