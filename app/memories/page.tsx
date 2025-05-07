@@ -302,6 +302,127 @@ export default function Memories() {
                 priority
               />
             </div>
+            {/* Adding missing images from desktop view */}
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 9.40.17 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 9.39.53 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 9.39.30 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/5.jpg" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_5949 1.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/158_0097.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_6162.jpg" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-27 at 4.22.43 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-27 at 4.22.26 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_7433.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/ponce sunset.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-27 at 4.22.54 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
           
 
