@@ -12,7 +12,7 @@ export default function Home() {
 	useEffect(() => {
 		setIsAnimated(true);
 
-		const emailParts = ["michellewang857", "gmail.com"];
+		const emailParts = ["michellewang", "u.northwestern.edu"];
 		setTimeout(() => {
 			setEmail(`${emailParts[0]}@${emailParts[1]}`);
 		}, 800);
@@ -83,6 +83,18 @@ export default function Home() {
 									<Image
 										src="/instagram.svg"
 										alt="Instagram"
+										width={28}
+										height={28}
+									/>
+								</a>
+								<a
+									href="https://tiktok.com/@michellee.wang"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Image
+										src="/tiktok.svg"
+										alt="TikTok"
 										width={28}
 										height={28}
 									/>
