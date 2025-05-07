@@ -264,7 +264,7 @@ export default function Memories() {
             </div>
             <div className="aspect-square relative rounded-[20px] overflow-hidden">
               <Image 
-                src="/photos/Screenshot 2025-04-06 at 10.01.37 PM.png" 
+                src="/photos/Screenshot 2025-04-06 at 10.01.37 PM.png" 
                 alt="Memory photo"
                 fill
                 sizes="90vw"
@@ -295,6 +295,127 @@ export default function Memories() {
             <div className="aspect-square relative rounded-[20px] overflow-hidden">
               <Image 
                 src="/photos/IMG_6406.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            {/* Adding missing images from desktop view */}
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 9.40.17 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 9.39.53 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-06 at 9.39.30 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/5.jpg" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_5949 1.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/158_0097.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_6162.jpg" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-27 at 4.22.43 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-27 at 4.22.26 PM.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/IMG_7433.JPG" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/ponce sunset.png" 
+                alt="Memory photo"
+                fill
+                sizes="90vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="aspect-square relative rounded-[20px] overflow-hidden">
+              <Image 
+                src="/photos/Screenshot 2025-04-27 at 4.22.54 PM.png" 
                 alt="Memory photo"
                 fill
                 sizes="90vw"
@@ -503,7 +624,7 @@ export default function Memories() {
         <div className="flex gap-2 w-full h-80">
               <div className="w-6/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-06 at 9.40.17 PM.png" 
+                  src="/photos/Screenshot 2025-04-06 at 9.40.17 PM.png" 
                   alt="Memory photo"
                   fill
                   sizes="16vw"
@@ -513,7 +634,7 @@ export default function Memories() {
               </div>
               <div className="w-7/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-06 at 9.39.53 PM.png" 
+                  src="/photos/Screenshot 2025-04-06 at 9.39.53 PM.png" 
                   alt="Memory photo"
                   fill
                   sizes="33vw"
@@ -526,7 +647,7 @@ export default function Memories() {
             <div className="flex gap-2 w-full h-80">
               <div className="w-4/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-06 at 9.39.30 PM.png" 
+                  src="/photos/Screenshot 2025-04-06 at 9.39.30 PM.png" 
                   alt="Memory photo"
                   fill
                   sizes="16vw"
@@ -569,7 +690,7 @@ export default function Memories() {
               </div>
               <div className="w-6/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-06 at 10.01.37 PM.png" 
+                  src="/photos/158_0097.JPG" 
                   alt="Memory photo"
                   fill
                   sizes="33vw"
@@ -625,7 +746,7 @@ export default function Memories() {
               </div>
               <div className="w-6/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-27 at 4.22.43 PM.png" 
+                  src="/photos/Screenshot 2025-04-27 at 4.22.43 PM.png" 
                   alt="Memory photo"
                   fill
                   sizes="33vw"
@@ -635,7 +756,7 @@ export default function Memories() {
               </div>
               <div className="w-3/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-27 at 4.22.26 PM.png" 
+                  src="/photos/Screenshot 2025-04-27 at 4.22.26 PM.png" 
                   alt="Memory photo"
                   fill
                   sizes="16vw"
@@ -648,7 +769,7 @@ export default function Memories() {
            <div className="flex gap-2 w-full h-80">
            <div className="w-3/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/IMG_7130.JPG" 
+                  src="/photos/IMG_7433.JPG" 
                   alt="Memory photo"
                   fill
                   sizes="16vw"
@@ -668,7 +789,7 @@ export default function Memories() {
               </div>
               <div className="w-6/12 relative rounded-[20px] overflow-hidden">
                 <Image 
-                  src="/photos/Screenshot 2025-04-27 at 4.22.54 PM.png" 
+                  src="/photos/Screenshot 2025-04-27 at 4.22.54 PM.png" 
                   alt="Memory photo"
                   fill
                   sizes="16vw"

@@ -151,7 +151,6 @@ export default function Home() {
               
                 <span>{email}</span>
               <span>&nbsp;i love meeting new people :D <br/></span>
-              <span> also i'm currently looking for summer opportunities!</span>
             </div>
           </div>
         </div>
