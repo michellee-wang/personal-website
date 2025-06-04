@@ -37,8 +37,7 @@ export default function Memories() {
 	};
 
 	return (
-		<T id="memories.page.0">
-			<div className="flex flex-col items-center justify-center min-h-screen bg-white text-black font-krub">
+		<div className="flex flex-col items-center justify-center min-h-screen bg-white text-black font-krub">
 				<main className="w-full max-w-5xl mx-auto p-4">
 					{/* Header */}
 					<div className="flex flex-col sm:flex-row items-center mb-8">
@@ -46,12 +45,14 @@ export default function Memories() {
 							href="/"
 							className="text-[#7691cc] hover:underline mb-4 sm:mb-0"
 						>
-							← Back to home
+							<T>← Back to home</T>
 						</Link>
-						<h1 className="text-lg sm:text-xl font-normal text-center sm:mx-auto">
-							chasing sunsets & making the most of my senior year with my
-							friends
-						</h1>
+						<T>
+							<h1 className="text-lg sm:text-xl font-normal text-center sm:mx-auto">
+								chasing sunsets & making the most of my senior year with my
+								friends
+							</h1>
+						</T>
 					</div>
 
 					{/* Social icons - Hidden on mobile, visible on desktop */}
@@ -842,9 +843,11 @@ export default function Memories() {
 					</div>
 					{/* Spotify Playlist */}
 					<div className="w-full max-w-md mx-auto my-8 px-4">
-						<h3 className="text-center text-lg mb-3 font-light italic text-[#7691cc]">
-							my fav song rn
-						</h3>
+						<T>
+							<h3 className="text-center text-lg mb-3 font-light italic text-[#7691cc]">
+								my fav song rn
+							</h3>
+						</T>
 						<iframe
 							src="https://open.spotify.com/embed/track/1bqrRn1pJWowNLA5N9L6uW?utm_source=generator"
 							width="100%"
@@ -923,13 +926,14 @@ export default function Memories() {
 
 					{/* Footer text with email protection */}
 					<div className="mt-4 sm:mt-8 text-center text-gray-600 text-sm px-4 flex flex-col items-center">
-						<p>
-							i love my friends a lot and im happiest when with them & watching
-							them succeed. i hope one day u can be featured here
-						</p>
+						<T>
+							<p>
+								i love my friends a lot and im happiest when with them & watching
+								them succeed. i hope one day u can be featured here
+							</p>
+						</T>
 					</div>
 				</main>
 			</div>
-		</T>
 	);
 }

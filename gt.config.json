@@ -3,9 +3,9 @@
   "locales": [
     "es",
     "zh",
-    "fr",
-    "de",
-    "ja"
+    "fr", 
+    "qbr"
   ],
-  "_versionId": "656ac8e81218af7fcf92068e32f3b0258090d4ab1899c7021cd2125a9d0b6047"
+  "framework": "next-app",
+  "_versionId": "c70b024b182073373a472040eee2d53cf0c734586a3dae2190163ade6d4cc0c3"
 }
