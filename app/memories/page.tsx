@@ -847,9 +847,10 @@ export default function Memories() {
 							<h3 className="text-center text-lg mb-3 font-light italic text-[#7691cc]">
 								my fav song rn
 							</h3>
+							<p className="text-center text-sm mb-3 font-light italic text-[#7691cc]">what good is living a life you've been given if all you do is stand in one place?</p>
 						</T>
 						<iframe
-							src="https://open.spotify.com/embed/track/1bqrRn1pJWowNLA5N9L6uW?utm_source=generator"
+							src="https://open.spotify.com/embed/track/0iMt8ZMe2BsNvsF9LFDOAn"
 							width="100%"
 							height="152"
 							frameBorder="0"
@@ -928,8 +929,10 @@ export default function Memories() {
 					<div className="mt-4 sm:mt-8 text-center text-gray-600 text-sm px-4 flex flex-col items-center">
 						<T>
 							<p>
+								
+								
 								i love my friends a lot and im happiest when with them & watching
-								them succeed. i hope one day u can be featured here
+								them succeed. i hope one day u can be featured here.
 							</p>
 						</T>
 					</div>

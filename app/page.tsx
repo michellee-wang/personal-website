@@ -29,9 +29,6 @@ export default function Home() {
 
 	return (
 		<>
-		<div className="locale-selector-wrapper">
-			<LocaleSelector />
-		</div>
 		<div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
 			
 			<div className="absolute top-4 right-4 z-10 flex gap-4">
@@ -150,17 +147,6 @@ export default function Home() {
 								</Link>
 							</li>
 							<li><Link href="https://generaltranslation.com" className="group relative inline-block" ><T>building @ general translation</T><span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span></Link></li>
-							<li>
-								<Link
-									href="https://x.com/michellewang857/status/1908747846569824715"
-									className="group relative inline-block"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<T>working on Inscript: An AI document editor (launching soon)</T>
-									<span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
-								</Link>
-							</li>
 							<li><T>learning machine learning & data sci</T></li>
 						</ul>
 
