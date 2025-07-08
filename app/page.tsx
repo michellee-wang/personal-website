@@ -120,7 +120,7 @@ export default function Home() {
 
 						<T>
 							<ul className="space-y-1 text-sm pl-9 mt-1">
-								<li>hs senior in atlanta & 17 years old</li>
+								<li>atlanta + sf for the summer</li>
 								<li>tennis & pickleball addict</li>
 								<li>
 									science olympiad 2x state champion 3x nats competitor (14th @
