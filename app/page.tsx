@@ -122,10 +122,7 @@ export default function Home() {
 							<ul className="space-y-1 text-sm pl-9 mt-1">
 								<li>atlanta + sf for the summer</li>
 								<li>tennis & pickleball addict</li>
-								<li>
-									science olympiad 2x state champion 3x nats competitor (14th @
-									nats)
-								</li>
+							
 							</ul>
 						</T>
 
@@ -141,7 +138,7 @@ export default function Home() {
 									href="/memories"
 									className="group relative inline-block"
 								>
-									<T>chasing sunsets & making the most of my senior year with my
+									<T>chasing sunsets & making the most of senior year summer with my
 									friends</T>
 									<span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
 								</Link>
