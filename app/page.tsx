@@ -3,198 +3,219 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { LocaleSelector, useGT } from "gt-next/client";
-import { T } from "gt-next";
+import { T, LocaleSelector, useLocale, useGT } from "gt-next";
 
 export default function Home() {
-	const t = useGT();
-	const [isAnimated, setIsAnimated] = useState(false);
-	const [email, setEmail] = useState(t("Loading..."));
+  const t = useGT();
+  const [isAnimated, setIsAnimated] = useState(false);
+  const [email, setEmail] = useState(t("Loading..."));
 
-	useEffect(() => {
-		setIsAnimated(true);
+  const locale = useLocale();
+  console.log(locale);
 
-		const emailParts = ["michellewang", "u.northwestern.edu"];
-		setTimeout(() => {
-			setEmail(`${emailParts[0]}@${emailParts[1]}`);
-		}, 800);
-	}, []);
+  useEffect(() => {
+    setIsAnimated(true);
 
-	const handleEmailClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault();
-		if (email !== t("Loading...")) {
-			window.location.href = `mailto:${email}`;
-		}
-	};
+    const emailParts = ["michellewang", "u.northwestern.edu"];
+    setTimeout(() => {
+      setEmail(`${emailParts[0]}@${emailParts[1]}`);
+    }, 800);
+  }, []);
 
-	return (
-		<>
-		<div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
-			
-			<div className="absolute top-4 right-4 z-10 flex gap-4">
-				<LocaleSelector />
-				<Link
-					href="/memories"
-					className="text-[#7691cc] hover:underline font-medium text-lg"
-				>
-					<T>/memories</T>
-				</Link>
-			</div>
+  const handleEmailClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (email !== t("Loading...")) {
+      window.location.href = `mailto:${email}`;
+    }
+  };
 
-			<main className="max-w-3xl w-full">
-				<div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-					<div className="flex flex-col items-center">
-						<div className="w-[200px] h-[200px] relative">
-							<Image
-								src="/photos/idk.jpg"
-								alt=" "
-								width={300}
-								height={300}
-								className="rounded-[30px]"
-								priority
-							/>
-						</div>
-						<div className="flex gap-6 mt-4 justify-center">
-							<a
-								href="https://github.com/michellee-wang"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src="/github.svg"
-									alt="GitHub"
-									width={28}
-									height={28}
-								/>
-							</a>
-							<a
-								href="https://www.linkedin.com/in/mw857/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src="/linkedin.svg"
-									alt="LinkedIn"
-									width={28}
-									height={28}
-								/>
-							</a>
-							<a
-								href="https://instagram.com/michellee.wang"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src="/instagram.svg"
-									alt="Instagram"
-									width={28}
-									height={28}
-								/>
-							</a>
-							
-						</div>
-					</div>
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
+        <div className="absolute top-4 right-4 z-10 flex gap-4">
+          <LocaleSelector />
+          <Link
+            href="/memories"
+            className="text-[#7691cc] hover:underline font-medium text-lg"
+          >
+            <T>/memories</T>
+          </Link>
+        </div>
 
-					<div className="mt-4 md:mt-0 flex-1">
-						<T>
-							<h1
-								className={`text-6xl font-light mb-2 relative transition-all duration-700 ${isAnimated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-							>
-								<span className="relative z-10">
-									<span className="font-bold">hiii </span>
-									<span className="font-bold">i'm michelle!</span>
-								</span>
-								<span
-									className={`absolute top-0 left-0 z-0 transform translate-x-[2px] translate-y-[2px] text-[#7691cc] blur-[4px] transition-all duration-1000 delay-300 ${isAnimated ? "opacity-100" : "opacity-0"}`}
-								>
-									<span className="font-bold">hiii </span>
-									<span className="font-bold">i'm michelle!</span>
-								</span>
-							</h1>
-						</T>
-						<T>
-							<p className="text-lg mb-3 font-bold">
-								i'm an incoming freshmen @ northwestern majoring in cs +
-								industrial engineering
-							</p>
-						</T>
+        <main className="max-w-3xl w-full">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <div className="flex flex-col items-center">
+              <div className="w-[200px] h-[200px] relative">
+                <Image
+                  src="/photos/idk.jpg"
+                  alt=" "
+                  width={300}
+                  height={300}
+                  className="rounded-[30px]"
+                  priority
+                />
+              </div>
+              <div className="flex gap-6 mt-4 justify-center">
+                <a
+                  href="https://github.com/michellee-wang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/github.svg"
+                    alt="GitHub"
+                    width={28}
+                    height={28}
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mw857/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/linkedin.svg"
+                    alt="LinkedIn"
+                    width={28}
+                    height={28}
+                  />
+                </a>
+                <a
+                  href="https://instagram.com/michellee.wang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/instagram.svg"
+                    alt="Instagram"
+                    width={28}
+                    height={28}
+                  />
+                </a>
+              </div>
+            </div>
 
-						<T>
-							<ul className="space-y-1 text-sm pl-9 mt-1">
-								<li>atlanta + sf for the summer</li>
-								<li>tennis & pickleball addict</li>
-							
-							</ul>
-						</T>
+            <div className="mt-4 md:mt-0 flex-1">
+              <T>
+                <h1
+                  className={`text-6xl font-light mb-2 relative transition-all duration-700 ${
+                    isAnimated
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  <span className="relative z-10">
+                    <span className="font-bold">hiii </span>
+                    <span className="font-bold">i'm michelle!</span>
+                  </span>
+                  <span
+                    className={`absolute top-0 left-0 z-0 transform translate-x-[2px] translate-y-[2px] text-[#7691cc] blur-[4px] transition-all duration-1000 delay-300 ${
+                      isAnimated ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <span className="font-bold">hiii </span>
+                    <span className="font-bold">i'm michelle!</span>
+                  </span>
+                </h1>
+              </T>
+              <T>
+                <p className="text-lg mb-3 font-bold">
+                  i'm an incoming freshmen @ northwestern majoring in cs +
+                  industrial engineering
+                </p>
+              </T>
 
-						<T>
-							<h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
-								currently:
-								<span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]"></span>
-							</h2>
-						</T>
-						<ul className="space-y-1 text-sm pl-9">
-							<li>
-								<Link
-									href="/memories"
-									className="group relative inline-block"
-								>
-									<T>chasing sunsets & making the most of senior year summer with my
-									friends</T>
-									<span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
-								</Link>
-							</li>
-							<li><Link href="https://generaltranslation.com" className="group relative inline-block" ><T>building @ general translation</T><span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span></Link></li>
-							<li><T>learning machine learning & data sci</T></li>
-						</ul>
+              <T>
+                <ul className="space-y-1 text-sm pl-9 mt-1">
+                  <li>atlanta + sf for the summer</li>
+                  <li>tennis & pickleball addict</li>
+                </ul>
+              </T>
 
-						<T>
-							<h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
-								previously:
-								<span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]"></span>
-							</h2>
-						</T>
-						<ul className="space-y-1 text-sm pl-9">
-							<li><T>RF comms research @ georgia tech research institute</T></li>
-							<li>
-								<Link
-									href="https://github.com/michellee-wang/wharton-data-sci"
-									className="group relative inline-block"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<T>wharton hs data sci competition</T>
-									<span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
-								</Link>
-							</li>
+              <T>
+                <h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
+                  currently:
+                  <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]"></span>
+                </h2>
+              </T>
+              <ul className="space-y-1 text-sm pl-9">
+                <li>
+                  <Link
+                    href="/memories"
+                    className="group relative inline-block"
+                  >
+                    <T>
+                      chasing sunsets & making the most of senior year summer
+                      with my friends
+                    </T>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://generaltranslation.com"
+                    className="group relative inline-block"
+                  >
+                    <T>building @ general translation</T>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                  </Link>
+                </li>
+                <li>
+                  <T>learning machine learning & data sci</T>
+                </li>
+              </ul>
 
-							<li>
-								<Link
-									href="https://ascend.hackclub.com"
-									className="group relative inline-block"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<T>organized hackathons w/ hack club (and spaceX)!</T>
-									<span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
-								</Link>
-							</li>
-						</ul>
+              <T>
+                <h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
+                  previously:
+                  <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]"></span>
+                </h2>
+              </T>
+              <ul className="space-y-1 text-sm pl-9">
+                <li>
+                  <T>RF comms research @ georgia tech research institute</T>
+                </li>
+                <li>
+                  <Link
+                    href="https://github.com/michellee-wang/wharton-data-sci"
+                    className="group relative inline-block"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <T>wharton hs data sci competition</T>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                  </Link>
+                </li>
 
-						<div className="mt-6 text-sm text-[#7691cc] flex flex-wrap items-center">
-							<T><span>reach me @&nbsp;</span></T>
+                <li>
+                  <Link
+                    href="https://ascend.hackclub.com"
+                    className="group relative inline-block"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <T>organized hackathons w/ hack club (and spaceX)!</T>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                  </Link>
+                </li>
+              </ul>
 
-							<span>
-								{email}
-							</span>
-							<T><span>
-								&nbsp;i love meeting new people :D <br />
-							</span></T>
-						</div>
-					</div>
-				</div>
-			</main>
-		</div>
-		</>
-	);
+              <div className="mt-6 text-sm text-[#7691cc] flex flex-wrap items-center">
+                <T>
+                  <span>reach me @&nbsp;</span>
+                </T>
+
+                <span>{email}</span>
+                <T>
+                  <span>
+                    &nbsp;i love meeting new people :D <br />
+                  </span>
+                </T>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
+  );
 }

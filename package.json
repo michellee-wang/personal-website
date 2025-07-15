@@ -4,27 +4,27 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run translate && npx gtx-cli translate && next build",
+    "build": "npm run translate && next build",
     "start": "next start",
     "lint": "next lint",
-    "translate": "locadex translate"
+    "translate": "npx locadex translate"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.3",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.15.11",
     "generaltranslation": "^6.2.10",
-    "gt-next": "^5.2.39",
-    "gtx-cli": "^1.2.22",
-    "next": "^15.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "gt-next": "^6.0.2",
+    "gtx-cli": "^2.0.5",
+    "next": "^15.4.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "three": "^0.158.0"
   },
   "devDependencies": {
-    "@types/node": "^20.9.2",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@types/node": "20.19.8",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.54.0",
     "eslint-config-next": "^15.2.4",
