@@ -1,9 +1,17 @@
 import { Metadata } from 'next';
+import { getGT } from 'gt-next/server';
 
-export const metadata: Metadata = {
-  title: 'Memories | Michelle Wang',
-  description: 'Memories and moments from my senior year with friends',
+const getMetadata = (t: (content: string) => string): Metadata => {
+  return {
+    title: t('Memories | Michelle Wang'),
+    description: t('Memories and moments from my senior year with friends'),
+  };
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getGT();
+  return getMetadata(t);
+}
 
 export default function MemoriesLayout({
   children,
