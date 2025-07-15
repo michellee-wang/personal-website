@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { T } from "gt-next";
+import { T, useGT } from "gt-next";
 
 export default function Memories() {
+	const t = useGT();
 	const [email, setEmail] = useState("");
 	const [encodedEmail, setEncodedEmail] = useState("");
 
@@ -129,7 +130,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_0098 2 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -140,7 +141,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_4971 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -151,7 +152,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_5689 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -162,7 +163,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_4877 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -173,7 +174,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_4493 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -184,7 +185,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_0256 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -195,7 +196,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_0591 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -206,7 +207,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_7848 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -217,7 +218,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_0589 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -228,7 +229,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_0267_Original 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -239,7 +240,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_5478 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -250,7 +251,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_2915 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -261,7 +262,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_6156 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -272,7 +273,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_4249 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -283,7 +284,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_4983 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -294,7 +295,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_7694 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -305,7 +306,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_6340 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -315,7 +316,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-06 at 10.01.37 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -325,7 +326,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_5896.PNG"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -335,7 +336,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_5708.JPG"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -345,7 +346,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_6406.JPG"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -356,7 +357,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-06 at 9.40.17 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -366,7 +367,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-06 at 9.39.53 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -376,7 +377,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-06 at 9.39.30 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -386,7 +387,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/5.jpg"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -396,7 +397,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_5949 1.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -406,7 +407,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/158_0097.JPG"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -416,7 +417,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_6162.jpg"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -426,7 +427,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-27 at 4.22.43 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -436,7 +437,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-27 at 4.22.26 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -446,7 +447,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/IMG_7433.JPG"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -456,7 +457,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/ponce sunset.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -466,7 +467,7 @@ export default function Memories() {
 							<div className="aspect-square relative rounded-[20px] overflow-hidden">
 								<Image
 									src="/photos/Screenshot 2025-04-27 at 4.22.54 PM.png"
-									alt="Memory photo"
+									alt={t("Memory photo")}
 									fill
 									sizes="90vw"
 									className="object-cover"
@@ -483,7 +484,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_0098 2 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -493,7 +494,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_4971 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -504,7 +505,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_5689 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="42vw"
 										className="object-contain"
@@ -518,7 +519,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_4877 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="50vw"
 										className="object-cover"
@@ -529,7 +530,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_4493 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="50vw"
 										className="object-contain"
@@ -543,7 +544,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_0256 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="25vw"
 										className="object-cover"
@@ -553,7 +554,7 @@ export default function Memories() {
 								<div className="w-4/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_0591 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -563,7 +564,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_7848 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -573,7 +574,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_0589 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -587,7 +588,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_0267_Original 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="25vw"
 										className="object-cover"
@@ -597,7 +598,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_5478 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="25vw"
 										className="object-cover"
@@ -607,7 +608,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_2915 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="25vw"
 										className="object-cover"
@@ -617,7 +618,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_6156 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="25vw"
 										className="object-cover"
@@ -631,7 +632,7 @@ export default function Memories() {
 								<div className="w-2/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_4249 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -641,7 +642,7 @@ export default function Memories() {
 								<div className="w-4/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_4983 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -652,7 +653,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_7694 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="50vw"
 										className="object-contain"
@@ -666,7 +667,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/Screenshot 2025-04-06 at 9.40.17 PM.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -676,7 +677,7 @@ export default function Memories() {
 								<div className="w-7/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/Screenshot 2025-04-06 at 9.39.53 PM.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -689,7 +690,7 @@ export default function Memories() {
 								<div className="w-4/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/Screenshot 2025-04-06 at 9.39.30 PM.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -699,7 +700,7 @@ export default function Memories() {
 								<div className="w-4/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/5.jpg"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -709,7 +710,7 @@ export default function Memories() {
 								<div className="w-5/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_5949 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -722,7 +723,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_6340 1.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -732,7 +733,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/158_0097.JPG"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -742,7 +743,7 @@ export default function Memories() {
 								<div className="w-5/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_5896.PNG"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -755,7 +756,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_5708.JPG"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -765,7 +766,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_6406.JPG"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -778,7 +779,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_6162.jpg"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -788,7 +789,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/Screenshot 2025-04-27 at 4.22.43 PM.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="33vw"
 										className="object-cover"
@@ -798,7 +799,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/Screenshot 2025-04-27 at 4.22.26 PM.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -811,7 +812,7 @@ export default function Memories() {
 								<div className="w-3/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/IMG_7433.JPG"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -821,7 +822,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/ponce sunset.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"
@@ -831,7 +832,7 @@ export default function Memories() {
 								<div className="w-6/12 relative rounded-[20px] overflow-hidden">
 									<Image
 										src="/photos/Screenshot 2025-04-27 at 4.22.54 PM.png"
-										alt="Memory photo"
+										alt={t("Memory photo")}
 										fill
 										sizes="16vw"
 										className="object-cover"

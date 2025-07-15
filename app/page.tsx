@@ -32,6 +32,7 @@ export default function Home() {
 		<div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
 			
 			<div className="absolute top-4 right-4 z-10 flex gap-4">
+				<LocaleSelector />
 				<Link
 					href="/memories"
 					className="text-[#7691cc] hover:underline font-medium text-lg"
