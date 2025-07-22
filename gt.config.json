@@ -1,5 +1,5 @@
 {
-  "defaultLocale": "en",
+  "defaultLocale": "en-US",
   "locales": [
     "en",
     "es",
@@ -14,7 +14,8 @@
     "ar-AE",
     "hy"
   ],
-  "projectId": "d6d28a6a-1198-48eb-9bc3-24ffee0f949e",
+  "projectId": "prj_prt7uvgint0ka3rtg5qanutz",
   "framework": "next-app",
-  "_versionId": "e9b735de656a43e7ff3b74b3bb9426b91eaa200ffbd63ce2991b0f119718193c"
+  "_versionId": "e9b735de656a43e7ff3b74b3bb9426b91eaa200ffbd63ce2991b0f119718193c",
+  "baseUrl": "https://api.gtx.wtf"
 }
