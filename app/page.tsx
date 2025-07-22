@@ -41,7 +41,6 @@ export default function Home() {
             <T>/memories</T>
           </Link>
         </div>
-FGR9TU0W8Y9UHIBEARJFSDKNFAIOAHUJGFGR9TU0W8Y9UHIBEARJFSDKNFAIOAHUJGFGR9TU0W8Y9UHIBEARJFSDKNFAIOAHUJGFGR9TU0W8Y9UHIBEARJFSDKNFAIOAHUJG
         <main className="max-w-3xl w-full">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             <div className="flex flex-col items-center">
