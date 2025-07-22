@@ -6,7 +6,7 @@ This repository is configured to use Locadex for automated internationalization.
 
 - **Working Directory**: `.`
 - **Branch Prefix**: `locadex/`
-- **Configured Locales**: `en`, `es`
+- **Configured Locales**: `pt`, `es`
 - **Local Translations**: Enabled
 
 ## How it works:
