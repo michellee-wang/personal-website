@@ -1,18 +1,19 @@
 {
   "defaultLocale": "en",
   "locales": [
-    "en",
-    "es",
-    "fr",
-    "en-US",
-    "sq",
     "af",
     "am",
     "ar",
-    "ar-MA",
-    "ar-EG",
     "ar-AE",
-    "hy"
+    "ar-EG",
+    "ar-MA",
+    "en",
+    "en-US",
+    "es",
+    "fr",
+    "hy",
+    "pt",
+    "sq"
   ],
   "projectId": "d6d28a6a-1198-48eb-9bc3-24ffee0f949e",
   "framework": "next-app",
