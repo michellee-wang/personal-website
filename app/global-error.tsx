@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { getLocale } from "gt-next/server";
-import { GTProvider, T } from "gt-next";
 
-export default async function GlobalError({
+export default function GlobalError({
 	error,
 	reset,
 }: { error: Error & { digest?: string }; reset: () => void }) {
@@ -14,28 +12,24 @@ export default async function GlobalError({
 	}, [error]);
 
 	return (
-		<html lang={await getLocale()}>
+		<html lang="en">
 			<body>
-				<GTProvider>
-					<T>
-						<div className="flex flex-col items-center justify-center min-h-screen p-4 bg-white text-black">
-							<div className="w-full max-w-lg text-center">
-								<h2 className="text-2xl font-semibold mb-4">
-									Something went wrong!
-								</h2>
-								<p className="text-md mb-6 text-gray-600">
-									Sorry, an unexpected error occurred in the application.
-								</p>
-								<button
-									onClick={() => reset()}
-									className="px-4 py-2 bg-[#D3ABAB] text-white rounded-lg hover:bg-[#c19b9b] transition"
-								>
-									Try again
-								</button>
-							</div>
-						</div>
-					</T>
-				</GTProvider>
+				<div className="flex flex-col items-center justify-center min-h-screen p-4 bg-white text-black">
+					<div className="w-full max-w-lg text-center">
+						<h2 className="text-2xl font-semibold mb-4">
+							Something went wrong!
+						</h2>
+						<p className="text-md mb-6 text-gray-600">
+							Sorry, an unexpected error occurred in the application.
+						</p>
+						<button
+							onClick={() => reset()}
+							className="px-4 py-2 bg-[#D3ABAB] text-white rounded-lg hover:bg-[#c19b9b] transition"
+						>
+							Try again
+						</button>
+					</div>
+				</div>
 			</body>
 		</html>
 	);

@@ -4,22 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run translate && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "translate": "npx locadex translate"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/web": "^9.7.3",
-    "@react-three/drei": "^9.122.0",
-    "@react-three/fiber": "^8.15.11",
-    "generaltranslation": "^6.2.10",
-    "gt-next": "^6.0.2",
-    "gtx-cli": "^2.0.5",
     "next": "^15.4.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "three": "^0.158.0"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@types/node": "20.19.8",
