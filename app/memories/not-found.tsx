@@ -12,13 +12,13 @@ export default function MemoriesNotFound() {
 				<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 					<Link
 						href="/memories"
-						className="px-4 py-2 bg-[#D3ABAB] text-white rounded-lg hover:bg-[#c19b9b] transition"
+						className="px-4 py-2 bg-[#7691cc] text-white rounded-lg hover:bg-[#5f79b8] transition"
 					>
 						See All Memories
 					</Link>
 					<Link
 						href="/"
-						className="px-4 py-2 border border-[#D3ABAB] text-[#D3ABAB] rounded-lg hover:bg-gray-50 transition"
+						className="px-4 py-2 border border-[#7691cc] text-[#7691cc] rounded-lg hover:bg-gray-50 transition"
 					>
 						Return Home
 					</Link>

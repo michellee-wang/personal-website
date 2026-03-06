@@ -29,6 +29,12 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
         <div className="absolute top-4 right-4 z-10 flex gap-4">
           <Link
+            href="/projects"
+            className="text-[#7691cc] hover:underline font-medium text-lg"
+          >
+            /projects
+          </Link>
+          <Link
             href="/memories"
             className="text-[#7691cc] hover:underline font-medium text-lg"
           >
@@ -116,7 +122,7 @@ export default function Home() {
 
               <ul className="space-y-1 text-sm pl-9 mt-1">
                 <li>originally from atlanta, georgia </li>
-                <li>spent the summer in san francisco working at a startup</li>
+                <li> moved across the nation to san francisco last summer to work @ a startup </li>
                 <li>tennis & pickleball addict</li>
               </ul>
 
@@ -126,11 +132,16 @@ export default function Home() {
               </h2>
               <ul className="space-y-1 text-sm pl-9">
               <li>
-                    building projects on the side (see my github)
-                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                 in school :D (it's rly cold in chicago)
                 </li>
                 <li>
-                  learning machine learning & data sci
+                  <Link href="/projects" className="group relative inline-block">
+                    buildinggg
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                  </Link>
+                </li>
+                <li>
+                  trying to figure out what i want to do (quant dev?!??) 
                 </li>
               </ul>
 
@@ -155,7 +166,7 @@ export default function Home() {
 
                 <li>
                   <Link
-                    href="https://ascend.hackclub.com"
+                    href="https://github.com/hackclub/ascend"
                     className="group relative inline-block"
                     target="_blank"
                     rel="noopener noreferrer"

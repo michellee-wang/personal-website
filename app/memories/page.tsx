@@ -42,7 +42,7 @@ export default function Memories() {
 					<div className="flex flex-col sm:flex-row items-center mb-8">
 						<Link
 							href="/"
-							className="text-[#7691cc] hover:underline mb-4 sm:mb-0"
+							className="text-[#7691cc] border border-[#7691cc]/40 rounded-full px-3 py-1 hover:bg-[#7691cc]/10 transition font-medium mb-4 sm:mb-0"
 						>
 							← Back to home
 						</Link>
@@ -50,6 +50,12 @@ export default function Memories() {
 							chasing sunsets & making the most of my senior year with my
 							friends
 						</h1>
+						<Link
+							href="/projects"
+							className="text-[#7691cc] border border-[#7691cc]/40 rounded-full px-3 py-1 hover:bg-[#7691cc]/10 transition font-medium mt-4 sm:mt-0"
+						>
+							/projects
+						</Link>
 					</div>
 
 					{/* Social icons - Hidden on mobile, visible on desktop */}
