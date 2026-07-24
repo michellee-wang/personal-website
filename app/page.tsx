@@ -116,14 +116,14 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg mb-3 font-bold">
-                i'm a freshmen @ northwestern majoring in cs +
-                industrial engineering
+                I'm 2nd year @ Northwestern University (~chicago) majoring in cs +
+                industrial engineering management sciences
               </p>
 
               <ul className="space-y-1 text-sm pl-9 mt-1">
-                <li>originally from atlanta, georgia </li>
-                <li> moved across the nation to san francisco last summer to work @ a startup </li>
-                <li>tennis & pickleball addict</li>
+                <li>from alpharetta, georgia</li>
+                <li>moved across the nation to san francisco last summer to work @ a startup </li>
+                <li>tennis & pickleball addict!</li>
               </ul>
 
               <h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
@@ -132,16 +132,19 @@ export default function Home() {
               </h2>
               <ul className="space-y-1 text-sm pl-9">
               <li>
-                 in school :D (it's rly cold in chicago)
+                 in school :D (very involved in the startup space @ NU)
                 </li>
                 <li>
                   <Link href="/projects" className="group relative inline-block">
-                    buildinggg
+                    building projects - interested devtools/SDKS + agent orchestration!
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
-                  trying to figure out what i want to do (quant dev?!??) 
+                  sidequesting (Italy 6/13-7/18) & trying to find myself
+                </li>
+                <li>
+                  looking for roles in intersection of product, growth & engineering!
                 </li>
               </ul>
 
@@ -156,7 +159,7 @@ export default function Home() {
                     href="https://generaltranslation.com"
                     className="group relative inline-block"
                   >
-                    swe and growth eng intern @ general translation
+                    swe + growth eng intern @ general translation (5th employee, 2nd intern)
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
                   </Link>
                 </li>
@@ -171,9 +174,12 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    organized hackathons w/ hack club (and spaceX)!
+                    logisitics for hackathons w/ hack club (and spaceX)!
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
                   </Link>
+                </li>
+                <li>
+                  RF systems research @ georgia tech research institute
                 </li>
               </ul>
 
