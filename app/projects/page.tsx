@@ -141,14 +141,7 @@ const projects: Project[] = [
       },
     ],
   },
-  {
-    id: "tiltstack",
-    title: "TiltStack",
-    category: "full stack",
-    context: "coming soon",
-    summary: "details coming in a bit — placeholder for now.",
-    links: [],
-  },
+  
   {
     id: "sync",
     title: "Sync",
@@ -352,18 +345,26 @@ export default function Projects() {
 
         <h1 className="text-5xl font-bold mb-2 text-[#4f67a8]">projects</h1>
         <p className="text-sm mb-8">
-          a few things i&apos;ve built recently — open more details on any
-          project. full history on{" "}
+          a few things i&apos;ve built recently! full history on{" "}
           <a
             href="https://github.com/michellee-wang"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-block text-[#7691cc]"
+            className="underline underline-offset-2 text-[#7691cc] hover:text-[#5f7ab8]"
           >
             github
-            <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
-          </a>
-          .
+          </a> .</p>
+          <p className="text-sm mb-8">in class i&apos;ve also done{" "}
+          <a
+            href="https://github.com/michellee-wang/setilab-handout"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 text-[#7691cc] hover:text-[#5f7ab8]"
+          >
+            computer systems labs
+          </a>{" "}
+          in C &amp; C++ (memory management, low-level systems)
+          plus DSA coursework and docker / tooling experience. i'm most comfortable with TypeScript & React! i'm happiest building at the intersection of web and AI tooling (Claude API, MCP, evals). i learn fast and i can read docs well so i'm willing to learn any new stack!
         </p>
 
         <div className="grid grid-cols-1 gap-3">
