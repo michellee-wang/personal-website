@@ -116,7 +116,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg mb-3 font-bold">
-                I'm 2nd year @ Northwestern University (~chicago) majoring in cs +
+                I'm 2nd year @ Northwestern University majoring in cs +
                 industrial engineering management sciences
               </p>
 
@@ -136,7 +136,7 @@ export default function Home() {
                 </li>
                 <li>
                   <Link href="/projects" className="group relative inline-block">
-                    building projects - interested devtools/SDKS + agent orchestration!
+                    building projects - <u>interested devtools/SDKS + agent orchestration</u>!
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
                   </Link>
                 </li>
@@ -179,7 +179,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  RF systems research @ georgia tech research institute
+                  <u>national science olympiad:</u> top 10 individual, most placements for GA since 2005, most medals for GA ever
                 </li>
               </ul>
 
