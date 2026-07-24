@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,6 +21,7 @@ type Project = {
   context: string;
   summary: string;
   links: ProjectLink[];
+  image?: string;
   highlights?: Highlight[];
   stack?: string;
 };
@@ -32,6 +34,7 @@ const projects: Project[] = [
     context: "SWE + growth eng intern · SF summer · 5th employee, 2nd intern",
     summary:
       "Before my freshman year of college, I moved to SF to work on this startup. General Translation is a dev tool used for localization (translating websites in different languages). During my time here, I one of the coolest things I did was help build an AI agent to implement our library on Next.JS webpages through Github PR. Outside of pure SWE I also worked on redesigning + coding the landing page, growth and small bug fixes",
+    image: "/projects/general-translation.jpg",
     links: [{ label: "Site", href: "https://generaltranslation.com" }],
     highlights: [
       {
@@ -60,7 +63,8 @@ const projects: Project[] = [
     context:
       "Systems Intern · Georgia Tech Research Institute · Sensor & Electromagnetic Applications Lab · June–July 2024",
     summary:
-      "Designed, prototyped, and validated an RF transmitter/receiver achieving under 10dB signal loss and 99% transmission efficiency across 2.4–5.8 GHz frequency bands.",
+      "Under the mentorship of Daniel Martinez from the SEAL Lab, my team designed, prototyped, and validated an RF transmitter/receiver achieving under 10dB signal loss and 99% transmission efficiency across 2.4–5.8 GHz frequency bands.",
+    image: "/projects/gtri.png",
     links: [],
     highlights: [
       {
@@ -117,7 +121,8 @@ const projects: Project[] = [
     category: "events",
     context: "Hack Club Athena · hackathon organizer · Jan 2023–Present",
     summary:
-      "A lot of my work in high school was with this non profit, Hack Club to organize all expense paid for hackathons to introduce more girls to cs. I organized Ascend, the largest U.S. high school girls' hackathon in 2024. I figured all logistics from booking the venue to getting food for everyone to manually booking flights. I organized and taught intro to CS workshops during these hackathons as well as mentored groups while they were building their projects.",
+      "A lot of my work in high school was with non profit Hack Club to introduce more girls to CS. I organized Ascend, the largest U.S. high school girls' hackathon in 2024. Hack Club gave us full autonomy (even though we were all high schoolers) of the event. I owned all logistics from venue to food to flights. I organized coding workshops and mentorship throughout the event",
+    image: "/projects/ascend.png",
     links: [
       { label: "GitHub", href: "https://github.com/hackclub/ascend" },
     ],
@@ -224,62 +229,81 @@ function ProjectCard({ project }: { project: Project }) {
       <span className="absolute top-3 right-3 z-10 rounded-full border border-[#7691cc]/40 bg-white/90 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#3f568f]">
         {project.category}
       </span>
-      <div className="p-5 pr-24">
-        <div className="flex items-center gap-2.5 flex-wrap mb-1">
-          <h2 className="text-xl font-bold text-[#3f568f]">{project.title}</h2>
-          {project.links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#7691cc] text-sm font-medium underline underline-offset-2 hover:text-[#5f7ab8]"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-        <p className="text-xs text-black/55 mb-2">{project.context}</p>
-        <p className="text-sm text-black/80 leading-relaxed mb-3">
-          {project.summary}
-        </p>
-        {project.stack && (
-          <p className="text-xs text-black/55 mb-4 leading-relaxed">
-            <span className="font-semibold text-[#3f568f]">STACK: </span>
-            {project.stack}
-          </p>
+
+      <div
+        className={`grid ${
+          project.image ? "md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)]" : ""
+        }`}
+      >
+        {project.image && (
+          <div className="relative h-44 md:h-full md:min-h-[220px] bg-[#d8e0f2]">
+            <Image
+              src={project.image}
+              alt={`${project.title} preview`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          </div>
         )}
 
-        {hasDetails && (
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition ${
-              open
-                ? "border-[#7691cc]/40 text-[#3f568f] bg-white/70 hover:bg-white"
-                : "border-[#7691cc] text-white bg-[#7691cc] hover:bg-[#5f7ab8]"
-            } focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7691cc]/50 focus-visible:ring-offset-2`}
-          >
-            {open ? "hide details" : "more details"}
-            <svg
-              className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                open ? "rotate-180" : ""
-              }`}
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden
+        <div className="p-5 pr-24">
+          <div className="flex items-center gap-2.5 flex-wrap mb-1">
+            <h2 className="text-xl font-bold text-[#3f568f]">{project.title}</h2>
+            {project.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#7691cc] text-sm font-medium underline underline-offset-2 hover:text-[#5f7ab8]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <p className="text-xs text-black/55 mb-2">{project.context}</p>
+          <p className="text-sm text-black/80 leading-relaxed mb-3">
+            {project.summary}
+          </p>
+          {project.stack && (
+            <p className="text-xs text-black/55 mb-4 leading-relaxed">
+              <span className="font-semibold text-[#3f568f]">STACK: </span>
+              {project.stack}
+            </p>
+          )}
+
+          {hasDetails && (
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition ${
+                open
+                  ? "border-[#7691cc]/40 text-[#3f568f] bg-white/70 hover:bg-white"
+                  : "border-[#7691cc] text-white bg-[#7691cc] hover:bg-[#5f7ab8]"
+              } focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7691cc]/50 focus-visible:ring-offset-2`}
             >
-              <path
-                d="M4 6l4 4 4-4"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        )}
+              {open ? "hide details" : "more details"}
+              <svg
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                  open ? "rotate-180" : ""
+                }`}
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden
+              >
+                <path
+                  d="M4 6l4 4 4-4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
 
       {hasDetails && (

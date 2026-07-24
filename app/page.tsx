@@ -122,7 +122,7 @@ export default function Home() {
 
               <ul className="space-y-1 text-sm pl-9 mt-1">
                 <li>from alpharetta, georgia</li>
-                <li>moved across the nation to san francisco last summer to work @ a startup </li>
+                <li>moved across the nation to SF last summer to work @ a startup </li>
                 <li>tennis & pickleball addict!</li>
               </ul>
 
@@ -174,12 +174,12 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    logisitics for hackathons w/ hack club (and spaceX)!
+                    logistics for hackathons w/ hack club (and spaceX)!
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
-                  <u>national science olympiad:</u> top 10 individual, most placements for GA since 2005, most medals for GA ever
+                  <u>national science olympiad:</u> top 10 individual, best placement for GA since 2005, most medals for GA ever
                 </li>
               </ul>
 
