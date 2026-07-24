@@ -44,9 +44,9 @@ export default function Home() {
         <main className="max-w-3xl w-full">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             <div className="flex flex-col items-center">
-              <div className="w-[200px] h-[200px] relative">
+              <div className="w-[180px] h-[200px] relative">
                 <Image
-                  src="/photos/idk.jpg"
+                  src="/photos/idk1.jpg"
                   alt=" "
                   width={300}
                   height={300}
