@@ -34,12 +34,6 @@ export default function Home() {
           >
             /projects
           </Link>
-          <Link
-            href="/memories"
-            className="text-[#7691cc] hover:underline font-medium text-lg"
-          >
-            /memories
-          </Link>
         </div>
         <main className="max-w-3xl w-full">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -190,6 +184,23 @@ export default function Home() {
                   &nbsp;i love meeting new people :D <br />
                 </span>
               </div>
+              <p className="mt-2 text-sm text-[#7691cc]">
+                please check out my{" "}
+                <Link
+                  href="/projects"
+                  className="underline underline-offset-2 hover:text-[#5f7ab8]"
+                >
+                  projects
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/sidequests"
+                  className="underline underline-offset-2 hover:text-[#5f7ab8]"
+                >
+                  sidequests
+                </Link>{" "}
+                page
+              </p>
             </div>
           </div>
         </main>

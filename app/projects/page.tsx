@@ -348,12 +348,6 @@ export default function Projects() {
           >
             ← back to home
           </Link>
-          <Link
-            href="/memories"
-            className="text-[#7691cc] border border-[#7691cc]/40 rounded-full px-3 py-1 hover:bg-[#7691cc]/10 transition font-medium"
-          >
-            /memories
-          </Link>
         </div>
 
         <h1 className="text-5xl font-bold mb-2 text-[#4f67a8]">projects</h1>
