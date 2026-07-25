@@ -185,7 +185,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="mt-2 text-sm text-[#7691cc]">
-                please check out my{" "}
+                check out my{" "}
                 <Link
                   href="/projects"
                   className="underline underline-offset-2 hover:text-[#5f7ab8]"
