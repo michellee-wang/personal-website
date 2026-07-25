@@ -27,12 +27,18 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white text-black font-krub">
-        <div className="absolute top-4 right-4 z-10 flex gap-4">
+        <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-1">
           <Link
             href="/projects"
             className="text-[#7691cc] hover:underline font-medium text-lg"
           >
             /projects
+          </Link>
+          <Link
+            href="/sidequests"
+            className="text-[#7691cc] hover:underline font-medium text-lg"
+          >
+            /sidequests
           </Link>
         </div>
         <main className="max-w-3xl w-full">

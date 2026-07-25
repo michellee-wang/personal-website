@@ -247,11 +247,10 @@ export default function SidequestsGlobe() {
           )}
 
           {hoverPlace && hoverPlace.id !== selectedId && (
-            <div className="pointer-events-none absolute left-4 top-4 z-20 max-w-[220px] rounded-2xl border border-[#7691cc]/25 bg-white/90 px-3 py-2 shadow-lg backdrop-blur-sm">
-              <p className="text-sm font-semibold text-[#4f67a8]">
+            <div className="pointer-events-none absolute left-4 top-4 z-20">
+              <p className="text-sm font-medium text-[#7691cc]">
                 {hoverPlace.name}
               </p>
-              <p className="mt-0.5 text-[11px] text-black/50">click to open</p>
             </div>
           )}
 
@@ -290,7 +289,7 @@ export default function SidequestsGlobe() {
           />
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
           {places.map((place) => {
             const active = place.id === selectedId;
             return (
@@ -302,10 +301,10 @@ export default function SidequestsGlobe() {
                   place.onGlobe !== false && setHoveredId(place.id)
                 }
                 onMouseLeave={() => setHoveredId(null)}
-                className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition border ${
+                className={`text-sm font-medium transition ${
                   active
-                    ? "bg-[#4f67a8] text-white border-[#4f67a8] shadow-sm"
-                    : "bg-white text-[#4f67a8] border-[#7691cc]/40 hover:bg-[#7691cc]/10 hover:border-[#7691cc]"
+                    ? "text-[#7691cc] underline underline-offset-4"
+                    : "text-black/70 hover:text-[#7691cc]"
                 }`}
               >
                 {place.shortLabel}
@@ -313,8 +312,8 @@ export default function SidequestsGlobe() {
             );
           })}
         </div>
-        <p className="mt-3 text-xs text-black/50">
-          click a place below · or drag the globe and tap a pin
+        <p className="mt-3 text-sm text-[#7691cc]/80">
+          drag to spin · tap a pin or label
         </p>
       </div>
 
@@ -324,13 +323,16 @@ export default function SidequestsGlobe() {
         }`}
       >
         {selected && (
-          <div className="lg:sticky lg:top-8">
-            <h2 className="text-3xl font-bold text-[#4f67a8] mb-3 leading-tight">
+          <div className="lg:sticky lg:top-8 max-w-md">
+            <h2 className="text-lg font-normal italic relative inline-block mb-4">
               {selected.name}
+              <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]" />
             </h2>
-            <p className="text-[15px] leading-relaxed text-black/75 whitespace-pre-wrap">
-              {selected.description}
-            </p>
+            <div className="space-y-3 text-sm leading-relaxed pl-1">
+              {selected.description.split(/\n\n+/).map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         )}
       </aside>

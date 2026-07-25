@@ -40,7 +40,7 @@ export const places: Place[] = [
     lat: 41.8781,
     lng: -87.6298,
     description:
-      "Where I currently go to school — Northwestern. Deep in the startup scene here, building things and meeting people.",
+      "Where I currently go to school — Northwestern. Go cats! If your reading this hit me up if you are ever in the chicago area ",
     images: ["/sidequests/photo-2.jpg"],
   },
   {
