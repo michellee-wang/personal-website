@@ -249,7 +249,7 @@ export default function SidequestsGlobe() {
           {hoverPlace && hoverPlace.id !== selectedId && (
             <div className="pointer-events-none absolute left-4 top-4 z-20">
               <p className="text-sm font-medium text-[#7691cc]">
-                {hoverPlace.name}
+                
               </p>
             </div>
           )}

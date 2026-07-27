@@ -22,7 +22,7 @@ export default function Sidequests() {
 
         <h1 className="text-5xl font-bold mb-3 mt-8 text-[#4f67a8]">sidequests</h1>
         <p className="text-sm mb-10 max-w-xl leading-relaxed">
-          places I&apos;ve lived and traveled — click a pin (or the labels
+          places I&apos;ve 'lived' — click a pin (or the labels
           below) to read each story. I love traveling and experiencing new
           cultures and people.
         </p>
