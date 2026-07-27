@@ -80,6 +80,13 @@ export default function Home() {
                   />
                 </a>
                 <a
+                  href="https://x.com/michellewang857"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image src="/x.svg" alt="X" width={28} height={28} />
+                </a>
+                <a
                   href="https://instagram.com/michellee.wang"
                   target="_blank"
                   rel="noopener noreferrer"
