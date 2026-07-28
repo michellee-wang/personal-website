@@ -5,14 +5,7 @@ export default function PhotoGallery() {
   if (galleryPhotos.length === 0) return null;
 
   return (
-    <section className="mt-16 w-full min-w-0">
-
-      <h3 className="mb-5 text-sm sm:text-base leading-snug font-medium tracking-tight text-black">
-        <span className="box-decoration-clone bg-[#d4dcf3] px-1.5 py-[0.12em]">
-          i really like photography, cooking, tennis and skiing
-        </span>
-      </h3>
-
+    <section className="mt-8 w-full min-w-0">
       <div id="photos" className="photo-gallery-grid scroll-mt-8">
         {galleryPhotos.map((photo) => {
           const isLandscape = photo.orientation === "landscape";
