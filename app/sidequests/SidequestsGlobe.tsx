@@ -312,9 +312,6 @@ export default function SidequestsGlobe() {
             );
           })}
         </div>
-        <p className="mt-3 text-sm text-[#7691cc]/80">
-          drag to spin · tap a pin or label
-        </p>
       </div>
 
       <aside

@@ -1,10 +1,11 @@
 import Link from "next/link";
+import PhotoGallery from "./PhotoGallery";
 import SidequestsGlobeLoader from "./SidequestsGlobeLoader";
 
 export default function Sidequests() {
   return (
-    <div className="flex flex-col items-center min-h-screen p-8 bg-gradient-to-b from-[#f7faff] via-white to-white text-black font-krub">
-      <main className="max-w-4xl w-full">
+    <div className="flex flex-col items-center min-h-screen p-4 sm:p-8 bg-gradient-to-b from-[#f7faff] via-white to-white text-black font-krub overflow-x-hidden">
+      <main className="max-w-5xl w-full min-w-0">
         <div className="flex items-center justify-between mb-8">
           <Link
             href="/"
@@ -22,6 +23,7 @@ export default function Sidequests() {
         </p>
 
         <SidequestsGlobeLoader />
+        <PhotoGallery />
       </main>
     </div>
   );

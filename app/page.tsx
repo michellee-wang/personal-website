@@ -151,7 +151,7 @@ export default function Home() {
                   sidequesting (Italy 6/13-7/18) & trying to find myself
                 </li>
                 <li>
-                  looking for roles in intersection of product, growth & engineering!
+                  eating 194810394921 sweet potatoes (they are my favorite food)
                 </li>
               </ul>
 
