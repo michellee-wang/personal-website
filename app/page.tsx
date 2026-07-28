@@ -44,13 +44,13 @@ export default function Home() {
         <main className="max-w-3xl w-full">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             <div className="flex flex-col items-center">
-              <div className="relative w-[180px] aspect-[9/10] sm:w-[220px] md:w-[260px] lg:w-[320px]">
+              <div className="w-[180px] h-[200px] relative">
                 <Image
                   src="/photos/idk1.jpg"
                   alt=" "
-                  fill
-                  sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, (max-width: 1024px) 260px, 320px"
-                  className="rounded-[30px] object-cover"
+                  width={300}
+                  height={300}
+                  className="rounded-[30px]"
                   priority
                 />
               </div>
