@@ -20,7 +20,7 @@ export const places: Place[] = [
     lat: 34.0754,
     lng: -84.2941,
     description:
-      "I was born and raised in Alpharetta, Georgia. Since most people don't know what it is I like to tell people that when Amazon was switching their delivery trucks to Rivian EVS, they chose a bunch of major cities like Phoeniz, New York, Houston and Alpharetta. Not Atlanta, but Alpharetta. For now, that's the only relevance Alpharetta has",
+      "My hometown of Alpharetta, Georgia!\n\n45 minutes away from the center of Atlanta so in high school, I used to sneak into GaTech CreateX startup events. Also since most people don't know what it is, I like to tell people that when Amazon was switching their delivery trucks to Rivian EVS, they chose a bunch of major cities like Phoenix, New York, Houston and Alpharetta. Not Atlanta, but Alpharetta. For now, that's the only relevance Alpharetta has.\n\nAlso, please don’t ask me what there is to do in Atlanta. Our history is kind of lacking because William Tecumseh Sherman burned the whole city down during the civil war.",
     images: ["/sidequests/photo-1.jpg", "/sidequests/photo-3.jpg"],
   },
   {
