@@ -36,7 +36,7 @@ export const places: Place[] = [
     lat: 41.8781,
     lng: -87.6298,
     description:
-      "Where I currently go to school — Northwestern. Go cats! If your reading this hit me up if you are ever in the chicago area ",
+      "Where I currently go to school — Northwestern. Go cats! \n\n I've never been so cold in my life (I'm from the south). I remember one time I was rushing to get to my midterm and I slipped on black ice and although I was in pain it made me a lot less nervous because I had the well being of glutes to worry about more. \n\n I'm on the quarter system so I'm here from late Sep to mid June. ",
   },
   {
     id: "italy",
