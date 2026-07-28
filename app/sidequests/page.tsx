@@ -19,7 +19,7 @@ export default function Sidequests() {
         <p className="text-sm mb-8">
           places i&apos;ve &apos;lived&apos; — click a pin (or the labels below)
           to read each story. i love traveling and experiencing new cultures and
-          people.<br />  i also enjoy photography, skiing, cooking and tennis! SCROLL FOR PHOTOS!!!
+          people.<br />  i also enjoy photography, skiing, cooking and tennis! 
         </p>
 
         <SidequestsGlobeLoader />
