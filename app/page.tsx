@@ -123,7 +123,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg mb-3 font-bold">
-                I'm 2nd year @ Northwestern University majoring in cs +
+                2nd year @ Northwestern University majoring in cs +
                 industrial engineering management sciences
               </p>
 
