@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Krub, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { AccentColorHydrator } from "./AccentColorPicker";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
 					<div className="noise-overlay"></div>
 				</div>
 				<main>{children}</main>
+				<Analytics />
 			</body>
 		</html>
 	);
