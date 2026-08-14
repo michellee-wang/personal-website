@@ -4,11 +4,23 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Globe, { type GlobeMethods } from "react-globe.gl";
 import { globePlaces, journeyPath, places, type Place } from "./places";
 
-const ACCENT_DARK = "#4f67a8";
-const PIN = "#7691cc";
-const PIN_ACTIVE = "#4f67a8";
-const PIN_ACTIVE_RGB = "79, 103, 168";
-const PIN_RGB = "118, 145, 204";
+const DEFAULT_PIN = "#7691cc";
+const DEFAULT_PIN_ACTIVE = "#4f67a8";
+
+function readAccent(varName: string, fallback: string) {
+  if (typeof window === "undefined") return fallback;
+  const value = getComputedStyle(document.documentElement)
+    .getPropertyValue(varName)
+    .trim();
+  return value || fallback;
+}
+
+function hexToRgb(hex: string) {
+  const raw = hex.replace("#", "");
+  if (raw.length !== 6) return "118, 145, 204";
+  const num = parseInt(raw, 16);
+  return `${(num >> 16) & 0xff}, ${(num >> 8) & 0xff}, ${num & 0xff}`;
+}
 
 type Arc = {
   startLat: number;
@@ -77,7 +89,9 @@ export default function SidequestsGlobe() {
           propagationSpeed: active ? 2.2 : 1.4,
           repeatPeriod: active ? 900 : 1400,
           color: (t: number) => {
-            const base = active ? PIN_ACTIVE_RGB : PIN_RGB;
+            const pin = readAccent("--accent-color", DEFAULT_PIN);
+            const pinActive = readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE);
+            const base = active ? hexToRgb(pinActive) : hexToRgb(pin);
             return `rgba(${base}, ${Math.max(0, 1 - t)})`;
           },
         };
@@ -173,7 +187,10 @@ export default function SidequestsGlobe() {
     const paint = () => {
       const active = selectedIdRef.current === place.id;
       const hovered = hoveredIdRef.current === place.id;
-      const color = active ? PIN_ACTIVE : PIN;
+      const pin = readAccent("--accent-color", DEFAULT_PIN);
+      const pinActive = readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE);
+      const accentDark = readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE);
+      const color = active ? pinActive : pin;
       const scale = active || hovered ? 1.18 : 1;
 
       wrap.innerHTML = `
@@ -185,13 +202,13 @@ export default function SidequestsGlobe() {
           margin-bottom:4px;
           border-radius:999px;
           background:${active ? color : "rgba(255,255,255,0.95)"};
-          color:${active ? "#fff" : ACCENT_DARK};
+          color:${active ? "#fff" : accentDark};
           border:1.5px solid ${color};
           font-size:11px;
           font-weight:600;
           letter-spacing:0.02em;
           white-space:nowrap;
-          box-shadow:0 4px 14px rgba(79,103,168,0.22);
+          box-shadow:0 4px 14px rgba(${hexToRgb(accentDark)},0.22);
           transform:scale(${scale});
           transition:transform 160ms ease, background 160ms ease;
         ">${place.shortLabel}</span>
@@ -241,14 +258,14 @@ export default function SidequestsGlobe() {
           style={{ height: dims.height }}
         >
           {!ready && (
-            <div className="absolute inset-0 z-10 flex items-center justify-center text-sm text-[#4f67a8]/70">
+            <div className="absolute inset-0 z-10 flex items-center justify-center text-sm text-[color-mix(in_srgb,var(--accent-color-dark)_70%,transparent)]">
               loading globe...
             </div>
           )}
 
           {hoverPlace && hoverPlace.id !== selectedId && (
             <div className="pointer-events-none absolute left-4 top-4 z-20">
-              <p className="text-sm font-medium text-[#7691cc]">
+              <p className="text-sm font-medium text-[var(--accent-color)]">
                 
               </p>
             </div>
@@ -303,8 +320,8 @@ export default function SidequestsGlobe() {
                 onMouseLeave={() => setHoveredId(null)}
                 className={`text-sm font-medium transition ${
                   active
-                    ? "text-[#7691cc] underline underline-offset-4"
-                    : "text-black/70 hover:text-[#7691cc]"
+                    ? "text-[var(--accent-color)] underline underline-offset-4"
+                    : "text-black/70 hover:text-[var(--accent-color)]"
                 }`}
               >
                 {place.shortLabel}
@@ -323,7 +340,7 @@ export default function SidequestsGlobe() {
           <div className="lg:sticky lg:top-8 max-w-md">
             <h2 className="text-lg font-normal italic relative inline-block mb-4">
               {selected.name}
-              <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]" />
+              <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[var(--accent-color)]" />
             </h2>
             <div className="space-y-3 text-sm leading-relaxed pl-1">
               {selected.description.split(/\n\n+/).map((paragraph, i) => (

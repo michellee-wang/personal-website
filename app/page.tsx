@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import AccentColorPicker from "./AccentColorPicker";
 
 export default function Home() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -30,16 +31,17 @@ export default function Home() {
         <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-1">
           <Link
             href="/projects"
-            className="text-[#7691cc] hover:underline font-medium text-lg"
+            className="text-[var(--accent-color)] hover:underline font-medium text-lg"
           >
             /projects
           </Link>
           <Link
             href="/sidequests"
-            className="text-[#7691cc] hover:underline font-medium text-lg"
+            className="text-[var(--accent-color)] hover:underline font-medium text-lg"
           >
             /sidequests
           </Link>
+          <AccentColorPicker />
         </div>
         <main className="max-w-3xl w-full">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -54,49 +56,94 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="flex gap-6 mt-4 justify-center">
+              <div className="flex gap-6 mt-4 justify-center text-[var(--accent-color)]">
                 <a
                   href="https://github.com/michellee-wang"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  <Image
-                    src="/github.svg"
-                    alt="GitHub"
-                    width={28}
-                    height={28}
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/mw857/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  <Image
-                    src="/linkedin.svg"
-                    alt="LinkedIn"
-                    width={28}
-                    height={28}
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
                 </a>
                 <a
                   href="https://x.com/michellewang857"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="X"
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  <Image src="/x.svg" alt="X" width={28} height={28} />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+                  </svg>
                 </a>
                 <a
                   href="https://instagram.com/michellee.wang"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="hover:opacity-80 transition-opacity"
                 >
-                  <Image
-                    src="/instagram.svg"
-                    alt="Instagram"
-                    width={28}
-                    height={28}
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -114,7 +161,7 @@ export default function Home() {
                   <span className="font-bold">i'm michelle!</span>
                 </span>
                 <span
-                  className={`absolute top-0 left-0 z-0 transform translate-x-[2px] translate-y-[2px] text-[#7691cc] blur-[4px] transition-all duration-1000 delay-300 ${
+                  className={`absolute top-0 left-0 z-0 transform translate-x-[2px] translate-y-[2px] text-[var(--accent-color)] blur-[4px] transition-all duration-1000 delay-300 ${
                     isAnimated ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -135,7 +182,7 @@ export default function Home() {
 
               <h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
                 currently:
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]"></span>
+                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[var(--accent-color)]"></span>
               </h2>
               <ul className="space-y-1 text-sm pl-9">
               <li>
@@ -144,7 +191,7 @@ export default function Home() {
                 <li>
                   <Link href="/projects" className="group relative inline-block">
                     building projects - <u>interested devtools/SDKS + agent orchestration</u>!
-                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[var(--accent-color)] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
@@ -157,7 +204,7 @@ export default function Home() {
 
               <h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
                 previously:
-                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[#7691cc]"></span>
+                <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[var(--accent-color)]"></span>
               </h2>
               
               <ul className="space-y-1 text-sm pl-9">
@@ -167,7 +214,7 @@ export default function Home() {
                     className="group relative inline-block"
                   >
                     swe + growth eng intern @ general translation (5th employee, 2nd intern)
-                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[var(--accent-color)] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
@@ -182,7 +229,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     logistics for hackathons w/ hack club (and spaceX)!
-                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[#7691cc] transition-all duration-200"></span>
+                    <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[var(--accent-color)] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
@@ -190,25 +237,25 @@ export default function Home() {
                 </li>
               </ul>
 
-              <div className="mt-6 text-sm text-[#7691cc] flex flex-wrap items-center">
+              <div className="mt-6 text-sm text-[var(--accent-color)] flex flex-wrap items-center">
                 <span>reach me @&nbsp;</span>
                 <span>{email}</span>
                 <span>
                   &nbsp;i love meeting new people :D <br />
                 </span>
               </div>
-              <p className="mt-2 text-sm text-[#7691cc]">
+              <p className="mt-2 text-sm text-[var(--accent-color)]">
                 check out my{" "}
                 <Link
                   href="/projects"
-                  className="underline underline-offset-2 hover:text-[#5f7ab8]"
+                  className="underline underline-offset-2 hover:text-[var(--accent-color-hover)]"
                 >
                   projects
                 </Link>{" "}
                 and{" "}
                 <Link
                   href="/sidequests"
-                  className="underline underline-offset-2 hover:text-[#5f7ab8]"
+                  className="underline underline-offset-2 hover:text-[var(--accent-color-hover)]"
                 >
                   sidequests
                 </Link>{" "}

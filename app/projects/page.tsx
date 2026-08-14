@@ -218,8 +218,8 @@ function ProjectCard({ project }: { project: Project }) {
   const hasDetails = !!(project.highlights && project.highlights.length > 0);
 
   return (
-    <article className="relative border border-[#7691cc]/30 bg-[#7691cc]/[0.05] rounded-2xl overflow-hidden shadow-sm transition-shadow hover:shadow-md">
-      <span className="absolute top-3 right-3 z-10 rounded-full border border-[#7691cc]/40 bg-white/90 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#3f568f]">
+    <article className="relative border border-[color:color-mix(in_srgb,var(--accent-color)_30%,transparent)] bg-[color-mix(in_srgb,var(--accent-color)_5%,transparent)] rounded-2xl overflow-hidden shadow-sm transition-shadow hover:shadow-md">
+      <span className="absolute top-3 right-3 z-10 rounded-full border border-[color:color-mix(in_srgb,var(--accent-color)_40%,transparent)] bg-white/90 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--accent-color-darker)]">
         {project.category}
       </span>
 
@@ -242,14 +242,14 @@ function ProjectCard({ project }: { project: Project }) {
 
         <div className="p-5 pr-24">
           <div className="flex items-center gap-2.5 flex-wrap mb-1">
-            <h2 className="text-xl font-bold text-[#3f568f]">{project.title}</h2>
+            <h2 className="text-xl font-bold text-[var(--accent-color-darker)]">{project.title}</h2>
             {project.links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#7691cc] text-sm font-medium underline underline-offset-2 hover:text-[#5f7ab8]"
+                className="text-[var(--accent-color)] text-sm font-medium underline underline-offset-2 hover:text-[var(--accent-color-hover)]"
               >
                 {link.label}
               </a>
@@ -261,7 +261,7 @@ function ProjectCard({ project }: { project: Project }) {
           </p>
           {project.stack && (
             <p className="text-xs text-black/55 mb-4 leading-relaxed">
-              <span className="font-semibold text-[#3f568f]">STACK: </span>
+              <span className="font-semibold text-[var(--accent-color-darker)]">STACK: </span>
               {project.stack}
             </p>
           )}
@@ -273,9 +273,9 @@ function ProjectCard({ project }: { project: Project }) {
               aria-expanded={open}
               className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition ${
                 open
-                  ? "border-[#7691cc]/40 text-[#3f568f] bg-white/70 hover:bg-white"
-                  : "border-[#7691cc] text-white bg-[#7691cc] hover:bg-[#5f7ab8]"
-              } focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7691cc]/50 focus-visible:ring-offset-2`}
+                  ? "border-[color:color-mix(in_srgb,var(--accent-color)_40%,transparent)] text-[var(--accent-color-darker)] bg-white/70 hover:bg-white"
+                  : "border-[var(--accent-color)] text-white bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)]"
+              } focus:outline-none focus-visible:ring-2 focus-visible:ring-[color-mix(in_srgb,var(--accent-color)_50%,transparent)] focus-visible:ring-offset-2`}
             >
               {open ? "hide details" : "more details"}
               <svg
@@ -306,15 +306,15 @@ function ProjectCard({ project }: { project: Project }) {
           }`}
         >
           <div className="overflow-hidden">
-            <div className="px-5 pb-5 pt-0 border-t border-[#7691cc]/20">
+            <div className="px-5 pb-5 pt-0 border-t border-[color:color-mix(in_srgb,var(--accent-color)_20%,transparent)]">
               <div className="pt-4">
-                <h3 className="text-sm font-semibold mb-2 text-[#3f568f] uppercase tracking-wide">
+                <h3 className="text-sm font-semibold mb-2 text-[var(--accent-color-darker)] uppercase tracking-wide">
                   Highlights
                 </h3>
                 <ul className="space-y-2 text-sm">
                   {project.highlights!.map((h) => (
                     <li key={h.title} className="leading-relaxed">
-                      <span className="font-semibold text-[#3f568f]">
+                      <span className="font-semibold text-[var(--accent-color-darker)]">
                         {h.title}.{" "}
                       </span>
                       <span className="text-black/75">{h.body}</span>
@@ -337,20 +337,20 @@ export default function Projects() {
         <div className="flex items-center justify-between mb-8">
           <Link
             href="/"
-            className="text-[#7691cc] border border-[#7691cc]/40 rounded-full px-3 py-1 hover:bg-[#7691cc]/10 transition font-medium"
+            className="text-[var(--accent-color)] border border-[color:color-mix(in_srgb,var(--accent-color)_40%,transparent)] rounded-full px-3 py-1 hover:bg-[color-mix(in_srgb,var(--accent-color)_10%,transparent)] transition font-medium"
           >
             ← back to home
           </Link>
         </div>
 
-        <h1 className="text-5xl font-bold mb-2 text-[#4f67a8]">projects</h1>
+        <h1 className="text-5xl font-bold mb-2 text-[var(--accent-color-dark)]">projects</h1>
         <p className="text-sm mb-8">
           a few things i&apos;ve built recently! full history on{" "}
           <a
             href="https://github.com/michellee-wang"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 text-[#7691cc] hover:text-[#5f7ab8]"
+            className="underline underline-offset-2 text-[var(--accent-color)] hover:text-[var(--accent-color-hover)]"
           >
             github
           </a> .</p>
@@ -359,7 +359,7 @@ export default function Projects() {
             href="https://github.com/michellee-wang/setilab-handout"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 text-[#7691cc] hover:text-[#5f7ab8]"
+            className="underline underline-offset-2 text-[var(--accent-color)] hover:text-[var(--accent-color-hover)]"
           >
             computer systems labs
           </a>{" "}

@@ -10,8 +10,10 @@
   --foreground: #171717;
   --font-krub: 'Krub', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --accent-color: #D3ABAB;
-  --accent-color-hover: #c79292;
+  --accent-color: #7691cc;
+  --accent-color-hover: #5f7ab8;
+  --accent-color-dark: #4f67a8;
+  --accent-color-darker: #3f568f;
   --secondary-color: #9BB8CD;
   --color-background: #ffffff;
   --color-foreground: #171717;
@@ -26,7 +28,6 @@
     --foreground: #ededed;
     --color-background: #0a0a0a;
     --color-foreground: #ededed;
-    --accent-color-hover: #e0bbbb;
     --box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.05), 0 2px 4px -1px rgba(255, 255, 255, 0.03);
   }
 }

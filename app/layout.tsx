@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Krub, Inter } from "next/font/google";
+import { AccentColorHydrator } from "./AccentColorPicker";
 import "./globals.css";
 
 // Load fonts
@@ -38,6 +39,7 @@ export default function RootLayout({
 	return (
 		<html className={`${krub.variable} ${inter.variable}`} lang="en">
 			<body className="font-body relative" suppressHydrationWarning>
+				<AccentColorHydrator />
 				<div className="page-background">
 					<div className="noise-overlay"></div>
 				</div>
