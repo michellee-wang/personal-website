@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Globe, { type GlobeMethods } from "react-globe.gl";
+import { ACCENT_CHANGE_EVENT } from "../AccentColorPicker";
 import { globePlaces, journeyPath, places, type Place } from "./places";
 
 const DEFAULT_PIN = "#7691cc";
@@ -27,6 +28,7 @@ type Arc = {
   startLng: number;
   endLat: number;
   endLng: number;
+  color: string[];
 };
 
 type Ring = {
@@ -51,10 +53,26 @@ export default function SidequestsGlobe() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [dims, setDims] = useState({ width: 560, height: 560 });
   const [ready, setReady] = useState(false);
+  const [accent, setAccent] = useState(DEFAULT_PIN);
+  const [accentDark, setAccentDark] = useState(DEFAULT_PIN_ACTIVE);
   const didInitialFly = useRef(false);
 
   selectedIdRef.current = selectedId;
   hoveredIdRef.current = hoveredId;
+
+  useEffect(() => {
+    const sync = () => {
+      setAccent(readAccent("--accent-color", DEFAULT_PIN));
+      setAccentDark(readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE));
+    };
+    sync();
+    window.addEventListener(ACCENT_CHANGE_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(ACCENT_CHANGE_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, []);
 
   const selected = useMemo(
     () => places.find((p) => p.id === selectedId) ?? null,
@@ -74,9 +92,13 @@ export default function SidequestsGlobe() {
         startLng: from.lng,
         endLat: to.lat,
         endLng: to.lng,
+        color: [
+          `rgba(${hexToRgb(accent)},0.15)`,
+          `rgba(${hexToRgb(accentDark)},0.85)`,
+        ],
       };
     });
-  }, []);
+  }, [accent, accentDark]);
 
   const rings: Ring[] = useMemo(
     () =>
@@ -244,7 +266,7 @@ export default function SidequestsGlobe() {
       .forEach((el) => {
         el.__paint?.();
       });
-  }, [selectedId, hoveredId]);
+  }, [selectedId, hoveredId, accent]);
 
   const hoverPlace =
     (hoveredId && globePlaces.find((p) => p.id === hoveredId)) || null;
@@ -296,7 +318,7 @@ export default function SidequestsGlobe() {
             ringPropagationSpeed="propagationSpeed"
             ringRepeatPeriod="repeatPeriod"
             arcsData={arcs}
-            arcColor={() => [`rgba(118,145,204,0.15)`, `rgba(91,127,214,0.85)`]}
+            arcColor="color"
             arcDashLength={0.4}
             arcDashGap={0.2}
             arcDashAnimateTime={2800}
