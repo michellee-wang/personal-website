@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'krub': ['var(--font-krub)', 'sans-serif'],
+        krub: ["var(--font-krub)", "sans-serif"],
+        body: ["var(--font-inter)", "sans-serif"],
       },
     },
   },

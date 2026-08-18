@@ -1,38 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-export const DEFAULT_ACCENT = "#7691cc";
-export const ACCENT_STORAGE_KEY = "accent-color";
-
-export function darkenHex(hex: string, amount: number): string {
-  const raw = hex.replace("#", "");
-  if (raw.length !== 6) return hex;
-  const num = parseInt(raw, 16);
-  const r = Math.max(0, Math.round(((num >> 16) & 0xff) * (1 - amount)));
-  const g = Math.max(0, Math.round(((num >> 8) & 0xff) * (1 - amount)));
-  const b = Math.max(0, Math.round((num & 0xff) * (1 - amount)));
-  return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
-}
-
-export const ACCENT_CHANGE_EVENT = "accent-color-change";
-
-export function applyAccent(hex: string) {
-  const root = document.documentElement;
-  root.style.setProperty("--accent-color", hex);
-  root.style.setProperty("--accent-color-hover", darkenHex(hex, 0.12));
-  root.style.setProperty("--accent-color-dark", darkenHex(hex, 0.22));
-  root.style.setProperty("--accent-color-darker", darkenHex(hex, 0.32));
-  window.dispatchEvent(new CustomEvent(ACCENT_CHANGE_EVENT, { detail: hex }));
-}
+import {
+  ACCENT_HEX_RE,
+  ACCENT_STORAGE_KEY,
+  DEFAULT_ACCENT,
+  applyAccent,
+  savedAccent,
+} from "../lib/accent";
 
 /** Applies saved accent on every page so /projects and /sidequests match. */
 export function AccentColorHydrator() {
   useEffect(() => {
     const saved = localStorage.getItem(ACCENT_STORAGE_KEY);
-    if (saved && /^#[0-9a-fA-F]{6}$/.test(saved)) {
-      applyAccent(saved);
-    }
+    if (saved && ACCENT_HEX_RE.test(saved)) applyAccent(saved);
   }, []);
   return null;
 }
@@ -50,9 +31,7 @@ export default function AccentColorPicker() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem(ACCENT_STORAGE_KEY);
-    const next =
-      saved && /^#[0-9a-fA-F]{6}$/.test(saved) ? saved : DEFAULT_ACCENT;
+    const next = savedAccent();
     setColor(next);
     applyAccent(next);
 

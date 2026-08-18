@@ -2,26 +2,15 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Globe, { type GlobeMethods } from "react-globe.gl";
-import { ACCENT_CHANGE_EVENT } from "../AccentColorPicker";
+import { UnderlinedHeading } from "../components/UnderlinedHeading";
+import {
+  ACCENT_CHANGE_EVENT,
+  DEFAULT_ACCENT,
+  DEFAULT_ACCENT_DARK,
+  hexToRgb,
+  readAccent,
+} from "../lib/accent";
 import { globePlaces, journeyPath, places, type Place } from "./places";
-
-const DEFAULT_PIN = "#7691cc";
-const DEFAULT_PIN_ACTIVE = "#4f67a8";
-
-function readAccent(varName: string, fallback: string) {
-  if (typeof window === "undefined") return fallback;
-  const value = getComputedStyle(document.documentElement)
-    .getPropertyValue(varName)
-    .trim();
-  return value || fallback;
-}
-
-function hexToRgb(hex: string) {
-  const raw = hex.replace("#", "");
-  if (raw.length !== 6) return "118, 145, 204";
-  const num = parseInt(raw, 16);
-  return `${(num >> 16) & 0xff}, ${(num >> 8) & 0xff}, ${num & 0xff}`;
-}
 
 type Arc = {
   startLat: number;
@@ -53,8 +42,8 @@ export default function SidequestsGlobe() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [dims, setDims] = useState({ width: 560, height: 560 });
   const [ready, setReady] = useState(false);
-  const [accent, setAccent] = useState(DEFAULT_PIN);
-  const [accentDark, setAccentDark] = useState(DEFAULT_PIN_ACTIVE);
+  const [accent, setAccent] = useState(DEFAULT_ACCENT);
+  const [accentDark, setAccentDark] = useState(DEFAULT_ACCENT_DARK);
   const didInitialFly = useRef(false);
 
   selectedIdRef.current = selectedId;
@@ -62,8 +51,8 @@ export default function SidequestsGlobe() {
 
   useEffect(() => {
     const sync = () => {
-      setAccent(readAccent("--accent-color", DEFAULT_PIN));
-      setAccentDark(readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE));
+      setAccent(readAccent("--accent-color", DEFAULT_ACCENT));
+      setAccentDark(readAccent("--accent-color-dark", DEFAULT_ACCENT_DARK));
     };
     sync();
     window.addEventListener(ACCENT_CHANGE_EVENT, sync);
@@ -111,8 +100,8 @@ export default function SidequestsGlobe() {
           propagationSpeed: active ? 2.2 : 1.4,
           repeatPeriod: active ? 900 : 1400,
           color: (t: number) => {
-            const pin = readAccent("--accent-color", DEFAULT_PIN);
-            const pinActive = readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE);
+            const pin = readAccent("--accent-color", DEFAULT_ACCENT);
+            const pinActive = readAccent("--accent-color-dark", DEFAULT_ACCENT_DARK);
             const base = active ? hexToRgb(pinActive) : hexToRgb(pin);
             return `rgba(${base}, ${Math.max(0, 1 - t)})`;
           },
@@ -209,9 +198,9 @@ export default function SidequestsGlobe() {
     const paint = () => {
       const active = selectedIdRef.current === place.id;
       const hovered = hoveredIdRef.current === place.id;
-      const pin = readAccent("--accent-color", DEFAULT_PIN);
-      const pinActive = readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE);
-      const accentDark = readAccent("--accent-color-dark", DEFAULT_PIN_ACTIVE);
+      const pin = readAccent("--accent-color", DEFAULT_ACCENT);
+      const pinActive = readAccent("--accent-color-dark", DEFAULT_ACCENT_DARK);
+      const accentDark = readAccent("--accent-color-dark", DEFAULT_ACCENT_DARK);
       const color = active ? pinActive : pin;
       const scale = active || hovered ? 1.18 : 1;
 
@@ -268,9 +257,6 @@ export default function SidequestsGlobe() {
       });
   }, [selectedId, hoveredId, accent]);
 
-  const hoverPlace =
-    (hoveredId && globePlaces.find((p) => p.id === hoveredId)) || null;
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] gap-8 lg:gap-10 items-start">
       <div className="w-full">
@@ -282,14 +268,6 @@ export default function SidequestsGlobe() {
           {!ready && (
             <div className="absolute inset-0 z-10 flex items-center justify-center text-sm text-[color-mix(in_srgb,var(--accent-color-dark)_70%,transparent)]">
               loading globe...
-            </div>
-          )}
-
-          {hoverPlace && hoverPlace.id !== selectedId && (
-            <div className="pointer-events-none absolute left-4 top-4 z-20">
-              <p className="text-sm font-medium text-[var(--accent-color)]">
-                
-              </p>
             </div>
           )}
 
@@ -360,10 +338,9 @@ export default function SidequestsGlobe() {
       >
         {selected && (
           <div className="lg:sticky lg:top-8 max-w-md">
-            <h2 className="text-lg font-normal italic relative inline-block mb-4">
+            <UnderlinedHeading className="text-lg font-normal italic relative inline-block mb-4">
               {selected.name}
-              <span className="absolute left-0 bottom-0 w-full h-[3px] bg-[var(--accent-color)]" />
-            </h2>
+            </UnderlinedHeading>
             <div className="space-y-3 text-sm leading-relaxed pl-1">
               {selected.description.split(/\n\n+/).map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
