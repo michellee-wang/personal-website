@@ -70,34 +70,69 @@ export default function AccentColorPicker() {
     localStorage.setItem(ACCENT_STORAGE_KEY, next);
   };
 
+  const handleReset = () => {
+    setColor(DEFAULT_ACCENT);
+    applyAccent(DEFAULT_ACCENT);
+    localStorage.removeItem(ACCENT_STORAGE_KEY);
+  };
+
   if (!visible) return null;
 
+  const isCustom = color.toLowerCase() !== DEFAULT_ACCENT.toLowerCase();
+
   return (
-    <label className="relative mt-1 p-1 rounded-md text-[var(--accent-color)] hover:bg-[color-mix(in_srgb,var(--accent-color)_10%,transparent)] transition cursor-pointer print:hidden inline-flex">
-      <span className="sr-only">Change accent color</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden
-      >
-        <path d="m2 22 1-1h3l9-9" />
-        <path d="M3 21v-3l9-9" />
-        <path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z" />
-      </svg>
-      <input
-        type="color"
-        value={color}
-        onChange={handleChange}
-        title="Change accent color"
-        className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
-      />
-    </label>
+    <div className="mt-1 flex items-center print:hidden">
+      <label className="relative p-1 rounded-md text-[var(--accent-color)] hover:bg-[color-mix(in_srgb,var(--accent-color)_10%,transparent)] transition cursor-pointer inline-flex">
+        <span className="sr-only">Change accent color</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden
+        >
+          <path d="m2 22 1-1h3l9-9" />
+          <path d="M3 21v-3l9-9" />
+          <path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z" />
+        </svg>
+        <input
+          type="color"
+          value={color}
+          onChange={handleChange}
+          title="Change accent color"
+          className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+        />
+      </label>
+      {isCustom && (
+        <button
+          type="button"
+          onClick={handleReset}
+          title="Reset accent color"
+          className="p-1 rounded-md text-[var(--accent-color)] hover:bg-[color-mix(in_srgb,var(--accent-color)_10%,transparent)] transition"
+        >
+          <span className="sr-only">Reset accent color</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+          </svg>
+        </button>
+      )}
+    </div>
   );
 }
