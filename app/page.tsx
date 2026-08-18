@@ -170,14 +170,13 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg mb-3 font-bold">
-                2nd year @ Northwestern University majoring in cs +
-                industrial engineering management sciences
+                passionate about the intersection of technology, growth &amp; storytelling
               </p>
 
               <ul className="space-y-1 text-sm pl-9 mt-1">
-                <li>from alpharetta, georgia</li>
-                <li>moved across the nation to SF last summer to work @ a startup </li>
-                <li>tennis & pickleball addict!</li>
+                <li>2nd year @ Northwestern University - majoring in cs +
+                industrial engineering</li>
+                <li>i love tennis & pickleball</li>
               </ul>
 
               <h2 className="text-lg font-normal mt-3 mb-1 italic relative inline-block">
@@ -186,19 +185,16 @@ export default function Home() {
               </h2>
               <ul className="space-y-1 text-sm pl-9">
               <li>
-                 in school :D (very involved in the startup space @ NU)
+                 in school :D (involved in the startup space @ NU)
                 </li>
                 <li>
                   <Link href="/projects" className="group relative inline-block">
-                    building projects - <u>interested devtools/SDKS + agent orchestration</u>!
+                    building projects - <u>interested devtools/SDKS + productivity tools</u>!
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[var(--accent-color)] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
-                  sidequesting (Italy 6/13-7/18) & trying to find myself
-                </li>
-                <li>
-                  eating 194810394921 sweet potatoes (they are my favorite food)
+                  eating 1000 sweet potatoes (they are my favorite food)
                 </li>
               </ul>
 
@@ -213,12 +209,12 @@ export default function Home() {
                     href="https://generaltranslation.com"
                     className="group relative inline-block"
                   >
-                    swe + growth eng intern @ general translation (5th employee, 2nd intern)
+                    swe + growth eng intern @ general translation 5th employee. SF (17)
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[var(--accent-color)] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
-                  RF comms research @ georgia tech research institute
+                  RF systems research @ georgia tech research institute. ATL (15)
                 </li>
 
                 <li>
@@ -228,12 +224,12 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    logistics for hackathons w/ hack club (and spaceX)!
+                    logistics for hackathon w/ hack club & spaceX. LA (16)
                     <span className="absolute left-0 bottom-0 w-full h-0 group-hover:h-[3px] bg-[var(--accent-color)] transition-all duration-200"></span>
                   </Link>
                 </li>
                 <li>
-                  <u>national science olympiad:</u> top 10 individual, best placement for GA since 2005, most medals for GA ever
+                  national science olympiad: top 10 individual, best placement for GA since 2005, most medals for GA ever
                 </li>
               </ul>
 
