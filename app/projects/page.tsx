@@ -83,6 +83,37 @@ const projects: Project[] = [
     stack: "RF circuit design, spectrum analyzer, network analyzer",
   },
   {
+    id: "reachable",
+    title: "Reachable",
+    category: "full stack",
+    context: "Full-site accessibility scanner · serverless on AWS · Oct 2026",
+    summary:
+      "Paste a URL and Reachable crawls the whole site in a real browser, runs axe-core on every page, and hands back a ranked report of accessibility barriers with screenshots and written fixes. No install, no account. I built it because most sites have issues like missing alt text, unnamed buttons, and low-contrast text that are tedious to hunt down by hand, and they make the web hard to use for people on screen readers, keyboards, or magnification.",
+    links: [
+      { label: "GitHub", href: "https://github.com/michellee-wang/reachable" },
+    ],
+    highlights: [
+      {
+        title: "Crawl + scan pipeline",
+        body: "Step Functions workflow that reads the sitemap and robots.txt, crawls up to 200 same-domain pages, then scans ~10 at a time in a container Lambda running Playwright + Chromium with axe-core.",
+      },
+      {
+        title: "Element-level screenshots",
+        body: "Every page is screenshotted, and each failing element gets its own cropped screenshot stored in S3 so the report points at exactly what to fix.",
+      },
+      {
+        title: "AI-written fixes",
+        body: "Bedrock generates a fix suggestion per issue. The prompt never includes the page's HTML, so untrusted page content can't inject into it.",
+      },
+      {
+        title: "Live progress + hardening",
+        body: "AppSync streams scan progress to the browser in real time. URL validation blocks localhost, private IPs, and the cloud metadata endpoint; a WAF rate-limits the API; results auto-delete after an hour.",
+      },
+    ],
+    stack:
+      "TypeScript, Vue + Vite, AWS Amplify Gen 2, Lambda (Docker), Step Functions, AppSync, DynamoDB, S3, WAF, Bedrock, Playwright, axe-core",
+  },
+  {
     id: "muse",
     title: "Muse 🎵",
     category: "full stack",
