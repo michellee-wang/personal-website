@@ -33,7 +33,7 @@ const projects: Project[] = [
     category: "internship",
     context: "SWE + growth eng intern · SF summer · 5th employee, 2nd intern",
     summary:
-      "Before my freshman year of college, I moved to SF to work on this startup. General Translation is a dev tool used for localization (translating websites in different languages). During my time here, I one of the coolest things I did was help build an AI agent to implement our library on Next.JS webpages through Github PR. Outside of pure SWE I also worked on redesigning + coding the landing page, growth and small bug fixes",
+      "Before my freshman year of college, I moved to SF to work on this startup. General Translation is a dev tool used for localization (translating websites in different languages). During my time here, one of the coolest things I did was help build an AI agent to implement our library on Next.JS webpages through Github PR. Outside of pure SWE I also worked on redesigning + coding the landing page, growth and small bug fixes",
     image: "/projects/general-translation.jpg",
     links: [{ label: "Site", href: "https://generaltranslation.com" }],
     highlights: [
@@ -140,38 +140,6 @@ const projects: Project[] = [
         body: "Co-Organized Blossom, Atlanta's first gender-focused hackathon, in partnership with Girl Scouts of Atlanta — taught 40 students with no prior programming experience to build and demo their first project.",
       },
     ],
-  },
-  
-  {
-    id: "sync",
-    title: "Sync",
-    category: "full stack",
-    context: "HackIllinois · Modal + Solana tracks",
-    summary:
-      "Geometry Dash on crack. Most of my team was new to hackathons, so we aimed for something that was actually fun to play and technically ambitious enough to compete. I'd wanted to train a model on MIDI for a while to create custom music and one of my friends and I's favorite game is Geometry Dash so we thought to integrate solona with it to create a fun and gambling aspect while having music created by a ML model in the background. Practical? Not really but very creative! I learned a lot and am very proud of this project because it was so technically difficult (read more in the README).",
-    links: [
-      { label: "GitHub", href: "https://github.com/michellee-wang/sync" },
-    ],
-    highlights: [
-      {
-        title: "Music Generation",
-        body: "Trained an LSTM on Modal GPUs to generate tracks from a user's top song MIDI, then deployed inference as a REST API on Modal so the game client could request levels without running training locally.",
-      },
-      {
-        title: "TypeScript Game Engine",
-        body: "Built the full game in TypeScript with custom gravity, collisions, jump arcs, and terrain generation synced to the music beat (Tone.js for audio timing).",
-      },
-      {
-        title: "Verifiable Randomness",
-        body: "Used ORAO VRF on Solana so terrain generation is cryptographically verifiable — not just a client-side PRNG that duel opponents could game.",
-      },
-      {
-        title: "Auth + Data",
-        body: "Privy for wallet auth (no browser extension required), Firebase for scores and duel match state; wallet connect only when staking or dueling. Solana/Anchor programs handle on-chain stake and duel settlement.",
-      },
-    ],
-    stack:
-      "Next.js + React (TypeScript), custom TS game engine, Tone.js, Solana/Anchor, ORAO VRF, Privy, Firebase, Modal-hosted LSTM inference",
   },
   {
     id: "wharton",

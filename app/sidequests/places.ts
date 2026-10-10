@@ -18,7 +18,7 @@ export const places: Place[] = [
     lat: 34.0754,
     lng: -84.2941,
     description:
-      "My hometown of Alpharetta, Georgia!\n\nIt's 45 minutes from the center of Atlanta, so in high school I used to sneak into Georgia Tech Create-X startup events. \n\n Also, since most people don't know what Alpharetta is, I like to tell people that when Amazon was switching their delivery trucks to Rivian EVs, they chose a bunch of major cities like Phoenix, New York, Houston, and Alpharetta. Not Atlanta — Alpharetta. For now, that's the only relevance Alpharetta has.\n\nWhat is there to do in Atlanta? Idk either! There's a lack of historical sites because William Tecumseh Sherman burned the whole city down during the Civil War.",
+      "My hometown of Alpharetta, Georgia!\n\nIt's 45 minutes from the center of Atlanta, so in high school I used to go to Georgia Tech Create-X startup events. \n\n Also, since most people don't know what Alpharetta is, I like to tell people that when Amazon was switching their delivery trucks to Rivian EVs, they chose a bunch of major cities like Phoenix, New York, Houston, and Alpharetta. Not Atlanta — Alpharetta. For now, that's the only relevance Alpharetta has.",
   },
   {
     id: "sf",
@@ -36,7 +36,7 @@ export const places: Place[] = [
     lat: 41.8781,
     lng: -87.6298,
     description:
-      "Where I currently go to school — Northwestern. Go cats! \n\n I've never been so cold in my life (I'm from the south). I remember one time I was rushing to get to my midterm and I slipped on black ice and although I was in pain it made me a lot less nervous because I had the well being of glutes to worry about more. \n\n I'm on the quarter system so I'm here from late Sep to mid June. ",
+      "Where I currently go to school — Northwestern. Go cats! \n\n I've never been so cold in my life (I'm from the south). I remember one time I was rushing to get to my midterm and slipped on black ice. It hurt, but it did make me a lot less nervous about the exam. \n\n I'm on the quarter system so I'm here from late Sep to mid June. ",
   },
   {
     id: "italy",
