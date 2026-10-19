@@ -132,7 +132,7 @@ export default function Home() {
               </p>
 
               <ul className="space-y-1 text-sm pl-9 mt-1">
-                <li>2nd year @ Northwestern University - majoring in cs +
+                <li>Northwestern University - majoring in cs +
                 industrial engineering</li>
                 <li>i love tennis & pickleball</li>
               </ul>
