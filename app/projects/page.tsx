@@ -57,6 +57,41 @@ const projects: Project[] = [
     stack: "TypeScript, Next.js, React, GitHub Actions / CI/CD, Python",
   },
   {
+    id: "code-for-good",
+    title: "Code for Good (1st place)",
+    category: "full stack",
+    links: [
+      {
+        label: "Writeup",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7519084195780939777/",
+      },
+    ],
+    context: "24-hour hackathon · team of 4 · Oct 2026",
+    image: "/projects/code-for-good.webp",
+    summary:
+      "JPMorganChase's hackathon for nonprofits. The Knowledge House was losing touch with alumni after the program ended, so we built an AI agent that checks in over iMessage, notices when someone mentions losing a job, and offers to introduce them to an alum who can help, writing everything back to Salesforce. We scraped components off their landing page to generate an MCP server instead of spending hours on design.",
+    highlights: [
+      {
+        title: "Conversational agent over iMessage",
+        body: "Built on Photon's Spectrum SDK with Claude tool use. iMessage has no API for creating a group chat, so we drove the sms: URL scheme with System Events and verified against the Messages SQLite database.",
+      },
+      {
+        title: "Double opt-in warm intros",
+        body: "The agent brokers introductions, but only after both sides consent to sharing their name and number.",
+      },
+      {
+        title: "Salesforce as system of record",
+        body: "Reads the directory live over REST/SOQL and writes contact updates, employment history, and task notes back from conversation context.",
+      },
+      {
+        title: "Staff dashboard",
+        body: "React 19 + Vite, with a follow-up queue and a Claude-powered assistant that answers questions with charts. Precomputed aggregates took it from 25s to about 2s.",
+      },
+    ],
+    stack:
+      "TypeScript, Bun, React 19, Vite, Claude API, Photon Spectrum SDK, Salesforce REST API + SOQL, SQLite, AppleScript",
+  },
+  {
     id: "gtri",
     title: "RF Comms — GTRI",
     category: "research",
